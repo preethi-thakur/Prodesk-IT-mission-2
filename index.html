@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expense tracker</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-200 to-blue-400" >
+    <h1 class="text-center text-4xl  font-bold mt-2 mb-6">EXPENSE TRACKER</h1>
+
+    <div class="flex  p-4 gap-10  justify-center items-start px-10">
+        <div class=" w-1/2  bg-lime-200 mb-16 p-10   rounded-lg   row shadow-2xl ">
+        <!-- <h1 class="font-bold text-2xl  mb-4"></h1> -->
+            <div> 
+            <label class="font-semibold">Total Salary:</label>
+            <input id="salary" type="number" value="input"
+                class="border p-2 columns-12  rounded ">
+            </div>
+            <div>
+                <label class="font-semibold">expense name:</label>
+                <input id="expenseName" type="text" class="p-2 my-4 border  mx-2 rounded-sm placeholder:expanse name ">
+            </div>
+            <div>
+                <label class="font-semibold">expense amount:<label>
+                <input id="expenseAmount" type="number" class="border p-2  rounded-sm">
+                <button onclick="addExpense()" type="submit" class="bg-green-600 p-2  hover:bg-green-400 rounded-lg mx-4">add expense</button>
+            </div>
+            <hr class="my-4">
+
+            <div>
+
+        <!-- Expense List -->
+                <div class="w-full">
+                    <h2 class="font-semibold mb-2">Expense List:</h2>
+                    <ul id="expenseList"></ul>
+                </div>
+                <div class="mt-6">
+                    <p>Total Salary: $<span id="totalSalary"></span></p>
+                    <p>Total Expenses: $<span id="totalExpenses"></span></p>
+                    <p class="text-green-600 font-bold">
+                        Remaining Balance: $<span id="balance"></span>
+                    </p>
+                </div>
+            </div>
+            <button onclick="clearAllData()" class=" bg-red-300 p-2 hover:bg-red-100 font-medium border rounded-lg ">clear all</button>
+        
+        </div>
+        <div class="w-[400px] h-[480px] bg-white p-6  mb-16 rounded-lg shadow-lg">
+           <canvas id="myChart" >
+            </canvas>
+            <p class="font-semibold text-center text-xl m-6 font-serif">BALANCE  VS  EXPENSES : PICTORIAL SUMMARY</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
